@@ -1,0 +1,11 @@
+services:
+  xv6:
+    build:
+      context: .
+    image: xv6-labs-2023:dev
+    container_name: xv6-labs-2023
+    stdin_open: true
+    tty: true
+    working_dir: /workspace/xv6-labs-2023
+    volumes:
+      - .:/workspace/xv6-labs-2023
