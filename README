@@ -47,3 +47,37 @@ You will need a RISC-V "newlib" tool chain from
 https://github.com/riscv/riscv-gnu-toolchain, and qemu compiled for
 riscv64-softmmu.  Once they are installed, and in your shell
 search path, you can run "make qemu".
+
+## Usage
+
+Build and start the Docker container:
+
+```sh
+docker compose up -d --build
+```
+
+Enter the container:
+
+```sh
+docker compose exec xv6 bash
+```
+
+Inside the container, build or run xv6:
+
+```sh
+make
+make qemu
+```
+
+Leave the container with `exit`. Stop it from the repository directory:
+
+```sh
+docker compose stop
+```
+
+Start it again and re-enter it:
+
+```sh
+docker compose start
+docker compose exec xv6 bash
+```
