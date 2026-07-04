@@ -10,6 +10,7 @@ RUN apt-get update \
         gdb-multiarch \
         git \
         qemu-system-misc \
+        python3 \
     && rm -rf /var/lib/apt/lists/*
 
 WORKDIR /workspace/xv6-labs-2023
